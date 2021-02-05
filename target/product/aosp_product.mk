@@ -39,13 +39,6 @@ PRODUCT_PACKAGES += \
     preinstalled-packages-platform-aosp-product.xml \
     WallpaperPicker \
 
-# Telephony:
-#   Provide a APN configuration to GSI product
-ifeq ($(HAVOC_BUILD),)
-PRODUCT_COPY_FILES += \
-    device/sample/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
-endif
-
 # NFC:
 #   Provide a libnfc-nci.conf to GSI product
 PRODUCT_COPY_FILES += \
